@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         timerSeekBar.setMax(600);
         timerSeekBar.setProgress(5);
-
+        
         timerSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onTick(long l) {
                     updateTimer((int)l/1000);
+                    timerSeekBar.setProgress((int)l/1000);
                 }
 
                 @Override
